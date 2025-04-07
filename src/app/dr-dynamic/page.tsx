@@ -4,11 +4,10 @@
 
 
 
-import Link from 'next/link';
-import Image from 'next/image';
-
 import { Header } from '@/components/dynamic/Header';
+
 import { Characters } from "@/models/Characters.model";
+import Link from 'next/link';
 
 const getCharacters = async () => {
     const responseCharacters = await fetch("https://dragonball-api.com/api/characters")
@@ -40,7 +39,7 @@ const DragonBallApiPage = async () => {
                                     <div 
                                         key={character.id}
                                         className="text-emerald-500 text-center bg-emerald-50 border-2 border-emerald-500 rounded-lg p-5">
-                                        <Image 
+                                        <img 
                                             src={character.image} 
                                             alt={character.name}
                                             title={character.name} 
